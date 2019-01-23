@@ -1,0 +1,28 @@
+1. Introduction
+  - Angular is a Javascript framework for building client side applications
+  - Why Angular? It makes our HTML more expressive, including variables, loops, if statements, and databinding.
+    - Also promotes modularity and has build in support for communication with a back end service
+  - Why a new Angular?
+    - Faster loads, change detecting, etc.
+    - It's Modern and supports hella browsers
+    - Simplified API, few stuff to learn, etc
+    - Enhances productivity
+
+2. Anatomy of an Angular Application
+  - Comprised of a set of components and services accross components.
+  - Each component is a template plus a class and metadata
+    - View is a template, code is with a class, additional information is defined with Metadata
+  - Angular modules help us organize our application into blocks of modularity
+  - Apps can have many additional modules, including feature modules.
+
+3. Get the Most from this Course
+  - Requres JavaScript, HTML, and CSS
+  - Helpful with OOP background
+  - Doesn't need prior knowledge of Angular or Typescript
+  - There's a github for this course
+
+4. Sample Application
+  - Basic app
+
+5. Course Outline
+  - Don't need to take notes on this

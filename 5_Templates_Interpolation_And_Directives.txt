@@ -1,0 +1,28 @@
+1. Introduction
+  - component has a template, class, and metadata (set by component decorator)
+
+2. Building a template
+  - We can define an Inline template with backticks or a single line with quotes
+  - Linked Templates are defined with the templateUrl property to provide the URL to the HTML file
+
+3. Building the Component
+4. Binding with Interpolation
+  - Coordinates communication between the component's class and its template and often involves passing data
+  - Interpolation is a one-way binding from the class property to the template.
+    - Like the <h1>{{pageTitle}}</h1>
+    - We can also do concatination, math, etc.
+    - Template expression is inside those curly braces
+
+5. Adding Logic with Directives
+  - Directive - Custom HTML element or attribute used to power up and extend our HTML
+    - We can use Angular or our own directive
+    - Angular has structural directives like *ngIf or *ngFor.
+      - The star marks it as a structural directive
+    - *ngIf
+      - Structural directive that removes or recreates a portion of the dom tree based on an expression
+      - if the expression defines to false, the elements are removed from the dom.
+
+6. Adding Logic with Directives
+  - for of vs for in
+    - for of iterates over iterable objects, resulting in the objects themselves
+    - for in iterates over properties of objects and returns indexes, like 1,2,3

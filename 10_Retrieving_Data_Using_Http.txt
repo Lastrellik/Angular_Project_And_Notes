@@ -1,0 +1,51 @@
+1. Introduction
+2. Observables and Reactive Extensions
+  - Reactive Extensions (RxJS)
+  - Help manage asynchronous data
+  - Treat events as a collection
+    - An array whose items arrive asynchronously over time
+  - Subscribe to receive notifications
+  - Are used within angular
+  -Observable Operators
+    - Methods on observables that compose new observables
+    - Transform the source observable in some way
+    - Process each value as its emitted
+    - For example, map, filter, take, merge, ...
+  -Composing Operators
+    - Composed operators with the pipe method
+    - Often called 'pipeable' operators
+    - This is where that RxJS package comes in.
+  - Observables are often appended with $ so we know it's an observable
+  - Promise vs Observable
+    - Promise
+      - provides a single future value
+      - not lazy
+      - not cancellable
+    - Observable
+      - Emits multiple values over time
+      - Lazy
+      - Cancellable
+      - Supports map, filter, reduce, and similar operators
+
+3. Sending an HTTP Request
+  - We use an HTTP Service
+  - The basic process of handling HTTP requests are as follows:
+    - Encapsulate it in a service
+    - Expose an observable for any class that needs that data
+    - The class subscibes to that observable and waits for data or a notification
+
+4. Checklists and Summary
+  - Http Checklist: Service
+    - Import what we need
+    - Define a dependency for the http client service
+      - Use a constructor parameter
+    - Create a method for each http request
+    - Call the desired http method, such as get
+      - Pass in the URL
+    - Use generics to specify the returned type
+    - Add error handling
+  - Http Checklist: Subscribing
+    - Call the subscibe method of the returned observable
+    - Provide a function to handle an emitted item
+      - Normally assigns a property to the returned JSON object
+    - Provide an error function to handle any returned errors

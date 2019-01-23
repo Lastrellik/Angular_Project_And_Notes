@@ -1,0 +1,14 @@
+1. Learning More:
+  - PluralSight courses:
+    - Angular: First look
+    - Angular CLI
+    - Angular Reactive Forms
+    - Angular Routing
+    - Angular Component Communication
+    - Angular Fundamentals
+    - Unit Testing in Angular
+
+  - Documentation
+    - angular.io
+
+  -Angular is a platform supporting multiple languages, templating, multiple rendering targets

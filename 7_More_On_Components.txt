@@ -1,0 +1,41 @@
+1. Introduction
+  - There are rules we want to follow when dealing with Components
+  - Strong typing helps syntax errors
+  - Interfaces help choose a type for components.
+  - Encapsulating styles helps keep things encapsulated
+  - Lifecycle hooks managed by angular that tap into key points to add flexibility and responsiveness to application
+  - Custom pipes help us transform data before displaying it in the view
+  - Nested components are good
+
+2. Defining Interfaces
+  - Types are the strength in TypeScript
+  - 'any' negates benefits of strong typing
+  - Interface is a specification a related set of properties and methods
+  - Interfaces are development time only
+  - I know what interfaces are....
+
+3. Encapsulating Component Styles
+  - We'll need to worry about styles.
+  - There's a best practice for this
+  - Component metadata can include a styles and styleUrls array
+
+4. Using Lifecycle Hooks
+  - Components have lifecycles
+  - create, render, create and render children, process changes, destroy
+    - There are hooks for each of these
+  -Most commonly used are these three:
+    - OnInit: perform component initialization, retrieve data
+    - OnChanges: Perform action after change to input properties
+    - OnDestroy: Perform clean up
+  -To implement LifeCycle Hooks, we use LifeCycle hook interfaces
+
+5. Building Custom Pipes
+  - Pipes transform bound properties before display
+  - There are many built in custom pipes
+  - A pipe needs a class, a class decorator annotated by @Pipe, and implement PipeTransform interface
+  - We need to import PipeTransform
+  - Using a custom pipe, simply add a pipe and a pipe name, plus any arguments
+
+6. Filtering a list
+  - Don't filter or sort based on pipes. It's bad.
+  - Move filtering and sorting to the component itself.

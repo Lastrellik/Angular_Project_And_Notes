@@ -1,0 +1,69 @@
+1. Introduction
+  - This is a deeper dive into Angular Modules.
+
+2. What is an Angular Module?
+  - A class with an NgModule decorator
+  - Purpose:
+    - Organize the pieces of our application
+    - Arrange them into blocks
+    - Extend our application with capabilities from external libraries
+    - Provide a template resolution environment
+    - Aggregate and re-export
+
+  - How does it organize our application?
+    - It declares every component, directive, and pipe
+    - Can export component, modules, pipes, etc
+    - Can import other angular modules
+    - Can register service providers with the angular injector, making them available everywhere
+  - Can think of modules as a box.
+
+3. Bootstrap Array
+  - Each application has at least 1 module and 1 component.
+  - The bootstrap array is the component it starts with
+  - Every application must bootstrap at least one component, the root application component.
+  - The bootstrap array should only be used in the root application module, AppModule.
+
+4. Declarations array
+  - We use the declarations array to define the components that belong to this module
+  - Every component, directive, and pipe we create must belong to one and only one angular module
+  - Only declare components, directives, and pipes.
+  - Never redeclare components, directives, or pipes that belong to another module
+  - All declared components, directives, and pipes are private by default. The are only accessible to other components, directives, and pipes declared in the same module.
+  - The angular module provides the template resolution environment for its component templates
+
+5. Exports Array
+  - Allows us to share a module's components, directives, and pipes with another module.
+  - We can also re-export Angular modules and third party modules.
+  - Export any component, directive, or pipe if another component needs it.
+  - Re-export modules to re-exports to export their components, directives, and pipes
+  - We can re-export something without importing it first
+  - Never export a service.
+
+6. Imports Array
+  - The array for importing Angular and other 3rd party modules. We can also import our own modules.
+  - We can put our Routes into their own modules
+  - Importing a module makes available ay exported components, directives, or pipes from that module.
+  - only import what this module needs
+  - Importing a module does not provide access to its imported modules
+    - "Imports are not inherited"
+
+7. Providers Array
+  - Use the provided in property of hte service itself.
+  - Any service provider added to the providers array is registered at the root of the application
+    - Including other feature components
+  - Don't add services to the providers array of a shared module
+  - Consider building a CoreModule for services and importing it once in the AppModule
+
+8. Feature Modules
+  - Helps us separate our different features into specific modules with separate concerns
+
+9. Shared Module
+  - Like you'd think.
+
+10. Revisiting AppModule
+11. Checklist and Summary
+  - Every application must have a root application module
+  - Feature modules
+  - Shared modules - modules shared accross different modules
+  - Core module - Module for a set of services, imported only once in the applciation module.
+  - Routing modules

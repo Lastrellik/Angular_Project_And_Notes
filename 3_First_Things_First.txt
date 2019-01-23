@@ -1,0 +1,19 @@
+1. Introduction
+  - Okay, I'm not a huge noob here. All of this is fine.
+
+2. Modules
+  - Helps modularize codes. Files are modules and modules are files.
+  - Angular modules are separate and different from ES6 Modules
+  - Angular modules has root, feature, and shared modules.
+  - Difference between ES6 modules and Angular modules:
+    - ES Modules
+      - Code files that import or export something
+      - Organize our code files
+      - modularize our code
+      - Promote code reuse
+    - Angular Modules
+      - Code files that organize the application into cohesive blocks of functionality
+      - Organize our application
+      - modularize our application
+      - Promote application boundaries
+

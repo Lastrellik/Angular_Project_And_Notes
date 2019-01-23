@@ -1,0 +1,17 @@
+1. Introduction
+2. Passing Parameters to a Route
+3. Protecting Routes with Guards
+  - CanActivate
+    - Guard navigation to a route
+  - CanDeactivate
+    - Guard navigation from a route
+  - Resolve
+    - pre-fetch data before activating a route
+  - CanLoad
+    - Prevent asynchronous routing
+
+4. Demo: Protecting Routes with Guards
+  - ng g g products/product-detail
+    - generate guard for products/product-detail
+
+5. Routing Checklist: Passing Parameters

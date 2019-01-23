@@ -1,0 +1,60 @@
+1. Introduction
+  - okay, I don't need to take notes on this
+2. What is a Component
+  - A component is a template
+    - view layout, created with HTML, includes binding and directives
+  - Plus a class
+    - Code supporting the view created with TypeScript
+  - Plus Metadata
+    - Extra data for angular. It's what makes the component an Angular component
+    - Defined with a decorator
+3. Creating the Component Class
+  - Common angular components have a convention with the feature name followed by "component"
+  - A class isn't enough to define a component
+
+4. Defining the Metadata with a Decorator
+  - A Decorator is a function that adds metadata to a class, its members, or its method arguments
+  - Scope of Decorator is limited to the feature it decorates
+  - Prefixed with @ sign
+  - Angular provides build in decorators
+  - Put the decorator in front of the feature we're decorating. Don't use a semicolon after a decorator
+  - Pass an object to a component that has many properties.
+  - If referencing HTML, specify a selector.
+  - A component should always have a layout.
+  - Components have bindings that are in HTML and classes
+
+5. Importing what we need
+  - import statements refer to import in ES6.
+  - Angular is Modular and is a collection of library modules made up of separate feature modules.
+
+6. Creating the App Component
+  - Multi-line HTML can be added to a ts class with backtick characters, not quotes. Remember the backtick characters.
+
+7. Bootstrapping Our App Component
+  - Bootstrapping in tech means a self-starting process that loads and goes.
+  - Host the application with an index.html then define our Angular module
+  - index.html usually contains the main page for the application. Often the only web page of the applciation.
+  - The one page is usually referred to as a single page application, or SPA
+  - The selector defined in the component metadata refers to the HTML tag in the index.html file.
+  - A directive is basically a custom element.
+  - The template inserts the html into the custom tag on the index.html page
+  - The Angular knows about this custom html element by looking in an Angular Module.
+
+8. Demo: Bootstrapping our application
+  - The component can have many modules and each module must include the base component in the "boostrap" array of the module decorator. The module decorator is prepended by @NgModule and is very similar to a component.
+
+  - npm start will start our angular application.
+
+9. Checklists and Summary
+  - Class -> code
+  - Decorator -> Metadata
+  - Component classes get a clear name
+    - Append "component" to the name
+    - Remember export keyword
+  - Put Data element in properties of the class. Utilize TypeScript's strong typing.
+  - Metadata
+    - Component decorators provide metadata
+    - Prefix decorator with @ and add parenthesis and pass correct metadata
+    - Remember selectors and such, if necessary
+    - Templates provide HTML syntax
+

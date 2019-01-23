@@ -1,0 +1,49 @@
+1. Introduction
+  - Data or logic not associated with a view or shared accross modules, we use services and dependency injection
+  - A Service is a class with a focused purpose.
+  - Used for features that:
+    - Are independent from any particular component
+    - Provide shared data or logic across components
+    - Encapsulate external interactions
+
+2. How does it work?
+  - Looks like a Service is a class
+  - Components can use a service by creating an instance of the service class, but this limits the scope
+  - We can also register the service with Angular in what's called a 'singleton'
+  - Angular provides a built in injector that we register our services with.
+  - If components needs servies, they define the service as a dependency and Angular provides an instance when it's instantiated. This is called dependency injection.
+  - With this approach to services, each class that utilizes this service has access to the same data. It's also easy to test, etc.
+  - Dependency injection is a coding pattern in which a class receives the instances of objects it needs (called dependencies) from an external source rather than creating them itself.
+    - In Angular, this source is the Angular Injector
+
+3. Building a Service
+  - Create the service class, define metadata with decorator, and import what we need
+    - Same as components and custom pipe
+  - Services often use @Injectable decorator
+
+4. Registering the Service
+  - Angular has an injector for each component, mirroring the component tree.
+  - A service registered with a specific component is only available to that component, or its child or nested components.
+  - When should you register a service with a root injector vs a component injector
+    - Root
+      - Service available throughout the application
+      - Recommended for most scenarios
+    - Component
+      - Service is available ONLY to that component and its child components
+      - Isolates a service used by only one component
+      - provides multiple instances of the service
+  - Registering the service in the root is done in the service decorator `providedIn: 'root'`. If we want it for only one component, we would put it in the component decorator, i.e. `providers: [ProductService]`
+
+5. Injecting the Service
+  - the dependency is injected in the injector. As little code should go in the constructor as possible.
+  - We can add the accessor keyword to the constructor to shorten our code.
+    - `constructor(private productService: ProductService)`
+    - doesn't need to be private
+
+6. Checklists and Summary
+  - Building a service is the same technique as components and custom pipes.
+  - Service decorator needs @Injectable()
+  - Registering a service means we should decide the appropriate level where it should be registered.
+  - If only one component needs the service, do it in the component's decorator. If it should be global, put it in the service decorator
+  - Put the service in the constructor. Remember the ngOnInit hook.
+

@@ -1,0 +1,21 @@
+1. Introduction
+  - Using a component
+    - Can be used as a directive
+    - As a routing target, so it appears like they traveled to another view
+  - What makes a component nestable?
+    - It is if its template only manages a fragment of a larger view, if it has a selector, and communicates with its parent container.
+
+2. Building a Nested Component
+  - Outer components are 'containers' or 'parent components', nested are 'nested' or 'child component'
+  - We want to change the star number to actual stars
+
+3. Using a nested component as a directive
+  -specify its directive in the template
+
+4. Passing Data to a Nested Component (@Input)
+  - There's an @Input decorator
+    - Declared in the nested component's class on any property
+  - We'll use property binding in the template to send it to the nested component
+
+5. Passing Data from a Component to a container
+  - Kind of like @Input(), but @Output()

@@ -1,0 +1,27 @@
+1. Introduction
+  - We want to bind dom elements to component properties.
+2. Property Binding
+  - Allows us to set a property of an element to a value of a template expression
+  -<img [src]='product.imageUrl'>
+  -using interpolation: <img src={{product.imageUrl}}>
+
+3. Handling Events with Event Binding
+  - <button (click)='toggleImage()'>
+  - the parentheses means the target event. Template statement is in quotes.
+
+4. Handling input with two-way binding
+  - To specify two way binding, use the ngModel directive
+  - <input [(ngModal)]='listFilter'>
+    - The square brackets indicate two way binding
+    - The parenthesis indicate event handling
+    - Think of a banana in a box
+
+5. Transforming Data with Pipes
+  - Pipes transform bound properties before they are displayed.
+  - Angular provides built-in pipes such as date, number, percent, json, slice, currency, etc
+  - We can build our own custom pipes
+  - Examples
+    - {{ product.productCode | lowercase }}
+    -<img [src]='product.imageUrl' [title]='product.productName | uppercase'>
+    - {{ product.price | currency | lowercase }}
+    - Some pipes support parameters. For example {{ product.price | currency:'USD' : 'symbol' : '1.2-2' }}

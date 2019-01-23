@@ -1,0 +1,66 @@
+1. Introduction
+  - Instead of nested components, we want to make routes.
+
+2. Generate Code and Handling ...
+  - The CLI can do a lot of this code
+  - ng g c products/product-detail --flat
+    - ng for angular, g for generate, c for component, location and name of component, flat means to not generate a folder
+  - The CLI just generated all the necessary code and updated the app.module.ts.... This makes EVERYTHING easy.
+  - the safe navigation operator '?' protects against null or undefined operations and won't access those problems.
+    - not always the best option. Doesn't work with two way binding
+  - ngIf can help with save navigation
+
+3. How Routing Works
+  - All angular pages are all on one page
+  - Configure a route for each component
+  - define options/actions
+  - Tie a route to each option/action
+  - Activate the route based on user action
+  - Activating a route displays the component's view
+
+4. Configure Routes
+  - Routing is component based. We need to define a route for each one
+  - each route requires a path, and that's appended to the application. In most cases, we specify a component as well. It's the component displayed when the route is activated.
+  - Routes are similar to how they are in Express
+  - We have a redirectTo route that can redirect clients.
+  - We have astrisks to do things like displaying a 404 page.
+  - No leading slashes in the routes. First match wins strategy when matching the routes.
+
+5. Tying Routes to Actions
+  - Menu option, link, image or button that activates a route
+  - Typing the URL in the address bar / bookmark
+  - The browser's forward or back buttons
+  - the routerLink directive will add routes to elements. It is enclosed in square brackets.
+
+6. Checklist and Summary
+  - To route or to nest. That is the question.
+  - Nest-able components
+    - define a selector
+    - nest in another component
+    - no route
+  - Routed Components
+    - No selector
+    - Configure routes
+    - Tie routes to actions
+  - Doing routing:
+    - Configure routes
+      - Define the base element
+      - Add RouterModule
+        - Add each route
+        - Order matters
+      - path: Url segment for the route
+        - no leading slash
+        - '' for default route
+        - '**' for wildcard route
+      - Component
+        - Not a string name, not enclosed in quotes
+    - Tie routes to actions
+      - Add the routerLink directive as an attribute to any clickable element
+        - enclose in square brackets
+      - Bind to a link parameters array
+        - First element is the path
+        - All other elements are route parameters
+    - Place the view
+      - Add the RouterOutlet directive
+        - Identifies where to display the routed component's view
+        - Specified in the host component's template

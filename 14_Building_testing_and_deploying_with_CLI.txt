@@ -1,0 +1,40 @@
+1. Introduction
+  - ng new, ng serve, ng generate, ng test, ng build
+
+2. Angular CLI Overview
+  - Purpose is to assist Angular developers with:
+    - Build an Angular application
+    - Generate Angular files
+    - Execute the application
+    - Run unit and end to end tests
+    - Prepare the application for deployment
+  - Must be installed globally
+  - ng help helps us out a lot
+
+3. ng new
+  - karma is a javascript test runner and is used for our unit tests
+  - To support older browsers, uncomment lines in the polyfills.ts file
+
+4. ng serve
+  - launches our development server on port 4200
+  - npm start runs ng serve
+  - -o will open the default browser for us, so we don't have to do it manually
+  - ng serve --help will teach us a lot of stuff
+
+5. ng generate
+  - ng g --help I'm sure will show me everything I need to do
+
+6. ng test
+  - ng test --help
+  - ng e2e runs our end to end tests using protractor
+
+7. ng build
+  - Outputs similar to the ng serve command, but actually generates the files we can deploy.
+  - When deploying to production, we want to minify and "tree shake" which drops out dead branches or unused pieces.
+  - If we precompile before deploying, things will run faster for us. This takes care of something called AOT, or ahead of time compiling
+  - adding --prod takes care of all of this for us. Including hashes. This makes the browser download the latest version instead of using what's in the cache
+  - ng build --help has a lot of other options for us for when we want to deploy prod.
+
+8. Checklists and Summary
+  - ng help, ng new, ng serve, ng generate, ng test, ng e2e, ng build
+  - ng generate class, component, directive, enum, guard, interface, module, pipe, service
